@@ -1,0 +1,164 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+
+a = np.array([1,2,3,4])
+b = np.array([10,20,30,40])
+plt.scatter(a, b)
+plt.plot(a, b)
+plt.grid()
+plt.xlabel("Weaght", color = 'g')
+plt.ylabel("Power", color = 'r')
+plt.title("Weaght of power", color = 'm')
+plt.show()
+#create of database
+import pandas as pd
+
+data = {
+  "Duration":{
+    "0":60,
+    "1":60,
+    "2":60,
+    "3":45,
+    "4":45,
+    "5":60
+  },
+  "Pulse":{
+    "0":110,
+    "1":117,
+    "2":103,
+    "3":109,
+    "4":117,
+    "5":102
+  },
+  "Maxpulse":{
+    "0":130,
+    "1":145,
+    "2":135,
+    "3":175,
+    "4":148,
+    "5":127
+  },
+  "Calories":{
+    "0":409,
+    "1":479,
+    "2":340,
+    "3":282,
+    "4":406,
+    "5":300
+  }
+}
+
+df = pd.DataFrame(data)
+
+print(df) 
+
+type(df)
+df.head(5)
+df.info()
+df.describe()
+df.tail()
+xxx = df[["Calories","Pulse"]].min()
+print(xxx)
+xx = df["Pulse"].mode()
+xx
+xxxx= df["Pulse"].median()
+xxxx
+import pandas as pd
+import matplotlib.pyplot as plt
+
+
+df.plot()
+
+plt.show()
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+df.head(6)
+df.tail(3)
+df.info()
+df.describe()
+x = df['Maxpulse'].min()
+x
+x = df['Maxpulse'].max()
+x
+x = df['Maxpulse'].mean() 
+x
+x = df[['Maxpulse', 'Pulse']].mean()
+x
+dx = {
+    "Name": ["mukul", "Tuhin", "Taif", "Asad"],
+    "age": [36, 30, 3, np.NaN],
+    "roll": [np.NaN, 1, 3, np.NaN],
+    "city": ['Natore', np.NaN, 'Dhaka', np.NaN]
+    
+}
+
+dx = pd.DataFrame(dx)
+print(dx)
+dx
+dx.dropna()
+dx
+new_dx = dx.dropna()
+new_dx
+dx
+dx.head()
+dx.tail(1)
+dx.describe()
+x = dx['age'].min()
+x
+x = dx['age'].max()
+x
+x = dx['age'].mean()
+x
+x = dx['age'].std()
+x
+dx
+dx.loc[1, 'city']='Rangpur'
+dx
+dx.loc[0, 'Name']= "Masud"
+dx
+dx.fillna(5, inplace = True)
+dx
+dx
+dx['age'].fillna(40, inplace = True)
+dx
+dx['roll'].fillna(10, inplace = True)
+dx
+dx['city'].fillna("Tangail", inplace = True)
+dx
+dx.drop_duplicates(inplace = True)
+dx
+
+
+
+student = {
+  "Name":{
+    "0":"Mukul",
+    "1":"Taif",
+    "2":"Asad",
+    "3":"Tushar",
+    "4":"Manik",
+  },
+    "Roll":{
+        "0": 1,
+        "1": 2,
+        "2": 3,
+        "3": 4,
+        "4": 5,
+        
+    },
+    "city":{
+        "0": "Natore",
+        "1": "Dhaka",
+        "2": "Bogra",
+        "3": "Pabna",
+        "4": "Kushtia"
+    },
+}
+
+dxx = pd.DataFrame(student)
+print(dxx)
+dxx
