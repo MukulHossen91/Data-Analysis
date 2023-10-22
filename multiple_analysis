@@ -1,0 +1,124 @@
+import numpy as np
+import matplotlib.pyplot as plt
+x = np.array([0, 6])
+
+y = np.array([0, 250])
+
+plt.plot(x, y)
+plt.show()
+
+a = np.array([1, 8])
+
+b = np.array([3, 10])
+
+
+plt.plot(a,b)
+plt.show()
+
+j = np.array([5,6,1,2])
+
+
+k = np.array([10,14,15,16])
+
+
+plt.plot(j, k)
+plt.show()
+
+import numpy as np
+
+
+import matplotlib.pyplot as plt
+
+b = np.array([4, 5])
+
+
+c = np.array([10, 15])
+
+
+plt.plot(b, c, marker = 'o')
+plt.show()
+
+l = [1, 2, 6, 8 ]
+
+ll = [3, 8, 1 ,10]
+
+plt.plot(l, ll, marker = '*')
+plt.show()
+
+y = np.array([3, 8, 1, 10, 5, 7])
+plt.plot(y, marker = 'h', ms = 10, markeredgecolor = "r", markerfacecolor = '#4CAF50', linestyle = 'dotted')
+plt.show()
+
+Name = ['Mukul', 'Taif', 'Sumon', 'Tamim']
+
+Run = [50,45,12,78]
+
+plt.bar(Name, Run)
+plt.title("Bangladesh vs Srilanka Asia Cup 2023")
+plt.xlabel("Name of Player")
+plt.ylabel("Individula Run")
+plt.show()
+
+y = np.array([3, 8, 1, 10, 5, 7])
+plt.plot(y, marker = 'h', ms = 10, markeredgecolor = "r", markerfacecolor = '#4CAF50', linestyle = 'dashed', c = 'r')
+plt.show()
+
+y = np.array([3, 8, 1, 10, 5, 7])
+plt.plot(y, marker = 'h', ms = 10, markeredgecolor = "r", markerfacecolor = '#4CAF50', ls = ':', linewidth = 5)
+plt.show()
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+y1 = np.array([3, 8, 1, 10])
+y2 = np.array([6, 2, 7, 11])
+
+plt.plot(y1, c = 'r')
+plt.plot(y2)
+plt.grid()
+
+plt.show()
+
+x = np.array([7,8,9,4,6,5])
+y = np.array([10,12,45,41,60, 65])
+
+
+font1 = {'family': 'arial', "color": "blue", "size": 20}
+font2 = {'family': 'serif', "color": "green", "size": 15}
+font3 = {'family': 'arial', "color": "cyan", "size": 10}
+
+plt.title("Sports Watch Date", fontdict = font1)
+plt.xlabel("Average Pulse", fontdict = font2)
+plt.ylabel("Calorie Burnage", fontdict = font3)
+
+plt.bar(x,y)
+plt.grid()
+plt.show()
+
+
+x = np.array([7,8,9,4,6,5])
+y = np.array([10,12,45,41,60, 65])
+
+
+plt.title("Sports Watch Date")
+plt.xlabel("Average Pulse")
+plt.ylabel("Calorie Burnage")
+
+plt.plot(x,y, color = 'green', lw = 1, ls = '--')
+plt.grid(color = 'gray', ls = ':', lw = 1)
+plt.show()
+
+import matplotlib.pyplot as plt
+
+import numpy as np
+
+y = np.array([75,25,25,16])
+
+mylabels = ["Apples", "Bananas", "Cherries", "Dates"]
+
+myexplode = [0.1, 0.1, 0.1, 0.1]
+plt.pie(y, labels = mylabels, colors = mycolors, shadow = True, explode = myexplode)
+plt.legend(title = "Four Fruits:")
+mycolors = ["hotpink", 'black', 'green', 'c']
+plt.show()
+
