@@ -1,0 +1,48 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import sys
+plt.rcParams.update({'font.size': 7})
+
+player = np.array(["Tamim Iqbal (c)","Litton Das","Najmul Hossain","Shakib Al Hasan ","Towhid Hridoy ",
+"Mushfiqur Rahim †","Afif Hossain ","Mehidy Hasan Miraz ","Taskin Ahmed ", "Hasan Mahmud", "Mustafizur Rahman"])
+run= np.array([13, 26, 12, 15, 51, 1, 4, 5, 7, 8, 3 ])
+
+font1 = {'family':'serif','color':'blue','size':15}
+font2 = {'family':'serif','color':'green','size':13}
+
+plt.plot(player, run, marker = 'o', color = 'Green', linewidth = 1.5, ms = 5, mec = 'hotpink', mfc = 'hotpink')
+
+plt.xlabel("Player Name", fontdict= font2,)
+plt.ylabel("Individual Run", fontdict= font2,)
+plt.title("Bangladesh VS Afghanistan (05/07/2023)", fontdict = font1,)
+
+plt.show()
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+
+'''player = np.array(["Tamim Iqbal (c)", "Litton Das", "Najmul Hossain", "Shakib Al Hasan ", "Towhid Hridoy ",
+"Mushfiqur Rahim †", "Afif Hossain ", "Mehidy Hasan Miraz ", "Taskin Ahmed ", "Hasan Mahmud", "Mustafizur Rahman"])
+run = np.array([13, 26, 12, 15, 51, 1, 4, 5, 7, 8, 3])'''
+
+plt.bar(player, run, width= 0.1)
+plt.xlabel("Player Name", fontdict= font2,)
+plt.ylabel("Individual Run", fontdict= font2,)
+plt.title("Bangladesh VS Afghanistan (05/07/2023)", fontdict = font1,)
+plt.show()
+
+
+import matplotlib.pyplot as plt
+import numpy as np
+
+'''player = np.array(["Tamim Iqbal (c)", "Litton Das", "Najmul Hossain", "Shakib Al Hasan ", "Towhid Hridoy ",
+"Mushfiqur Rahim †", "Afif Hossain", "Mehidy Hasan Miraz ", "Taskin Ahmed", "Hasan Mahmud", "Mustafizur Rahman"])
+run = np.array([13, 26, 12, 15, 51, 1, 4, 5, 7, 8, 3 ])'''
+
+plt.pie(run, labels=player)
+plt.title("Bangladesh VS Afghanistan (05/07/2023)", fontdict = font1,)
+plt.legend()
+plt.show()
+
