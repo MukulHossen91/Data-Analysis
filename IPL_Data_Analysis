@@ -1,0 +1,35 @@
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+    
+
+ipl = pd.read_csv("ipl_2022_dataset.csv")
+ipl.head()
+ipl.shape
+ipl.info()
+ipl.columns
+ipl.drop('Unnamed: 0', axis=1, inplace = True)
+ipl.head()
+ipl.isnull().sum()
+ipl[ipl['Cost IN $ (000)'].isnull()]
+ipl['COST IN ₹ (CR.)'] = ipl['COST IN ₹ (CR.)'].fillna(0)
+ipl['Cost IN $ (000)'] = ipl['Cost IN $ (000)'].fillna(0)
+ipl[ipl['2021 Squad'].isnull()]
+ipl['2021 Squad'] = ipl['2021 Squad'].fillna('Not Participated')
+ipl.isnull().sum()
+teams = ipl[ipl['Cost IN $ (000)']>0]['Team'].unique()
+teams
+ipl['status'] = ipl['Team'].replace(teams, 'sold')
+ipl.head()
+ipl
+ipl[ipl['Player'].duplicated(keep=False)]
+# How many players is participated in 2022 IPL Auction?
+
+ipl.shape[0]
+
+# How many types of players have participated?
+
+types = ipl['TYPE'].value.counts()  
+types.reset_index()
