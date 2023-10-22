@@ -1,0 +1,140 @@
+fruits = ['orange', 'apple', 'pear', 'banana', 'kiwi', 'apple', 'banana']
+
+fruits
+
+type(fruits)
+
+fruits.count('apple')
+
+fruits.count('tangerine')
+
+fruits.count('banana')
+
+fruits.reverse()
+
+fruits
+
+c = [1,2,3,4,5]
+
+c.reverse()
+
+c
+
+fruits.append('Jackfruits')
+
+fruits
+
+fruits.sort()
+
+fruits
+
+fruits.pop()
+
+fruits
+
+fruits.pop(1)
+
+fruits
+
+stack = [3,4,5] 
+
+stack
+
+stack.append(6)
+
+stack
+
+stack.append(7)
+
+stack
+
+stack.pop()
+
+stack
+
+stack.pop()
+
+stack
+
+stack
+
+stack.pop()
+
+stack
+
+from collections import deque
+
+queue = deque(["Eric", "John", "Michael"])
+
+queue
+
+type(queue)
+
+queue.append("mukul")
+
+queue
+
+queue.append("Asad")
+
+queue
+
+queue.popleft()
+
+queue
+
+queue.popleft()
+
+queue
+
+# List comprehensions
+squares = []
+for x in range(10):
+    squares.append(x**2)
+
+squares
+
+L = []
+
+
+for x in range(101):
+    L.append(x)
+
+    
+
+L
+
+squares = list(map(lambda x: x**2, range(10)))
+
+squares
+
+squares = [x**2 for x in range(10)]
+
+squares
+
+combs = []
+for x in [1, 2, 3]:
+    for y in [3,1,4]:
+        if x !=y:
+            combs.append((x,y))
+
+combs
+   
+
+import math
+
+
+print(math.ceil(1.2))
+
+print(math.ceil(-5.12))
+
+print(math.ceil(22.23))
+
+print(math.pi)
+
+print(math.sqrt(81))
+
+print(math.floor(45.56))
+
+print(math.floor(12.21
+                ))
+
