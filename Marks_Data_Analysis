@@ -1,0 +1,299 @@
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as nsn
+
+ds = pd.read_csv("marks.csv")
+print(ds)
+ds.head()
+ds.info()
+ds.describe()
+Name = ["mukul", "taif", "Manik", "Akash"]
+Marks = [50,60,70,85]
+plt.bar(Name, Marks)
+plt.xlabel("Student_Name")
+plt.ylabel("Student_marks", color= "red",)
+plt.title("student_result")
+plt.show()
+plt.bar('Name', 'Marksenglish', data = ds, width = 0.2)
+plt.xlabel("Student_Name", color= 'blue')
+plt.ylabel("Student_marks", color= "red",)
+plt.title("student_result", color= 'orange')
+plt.show()
+plt.scatter('Name', 'Marksenglish', data = ds)
+plt.xlabel("Student_Name", color= 'blue')
+plt.ylabel("Student_marks", color= "red",)
+plt.title("student_result", color= 'orange')
+plt.show()
+plt.plot('Name', 'Marksenglish', data = ds, linestyle = 'dashed')
+plt.xlabel("Student_Name", color= 'blue')
+plt.ylabel("Student_marks", color= "red",)
+plt.title("student_result", color= 'orange')
+plt.show()
+ds.head(10)
+plt.plot('Name', 'Marksenglish', data = ds, linestyle = 'solid', color = '#4CAF50', linewidth = '10.5')
+plt.xlabel("Student_Name", color= 'blue')
+plt.ylabel("Student_marks", color= "red",)
+plt.title("student_result", color= 'orange')
+plt.show()
+plt.barh('Name', 'Marksenglish', data = ds, color= 'orange', height = 0.1)
+plt.xlabel("Student_Name", color= 'blue')
+plt.ylabel("Student_marks", color= "red",)
+plt.title("student_result", color= 'orange')
+plt.show()
+x = np.random.ran(10, 100, 10)
+print(x)
+x = np.random.normal(170, 10, 250)
+
+plt.hist(x)
+plt.show() 
+import random
+import random
+num = random.randint(4,10)
+print(num)
+import random
+x = np.random.normal(1,10,3)
+print(x)
+# importing library
+import matplotlib.pyplot as plt
+import numpy as np
+ 
+# Data for plotting
+x = np.arange(0.0, 2.0, 0.01)
+y = 1 + np.sin(2 * np.pi * x)
+ 
+# Creating 6 subplots and unpacking the output array immediately
+fig, ((ax1, ax2), (ax3, ax4), (ax5, ax6)) = plt.subplots(3, 2)
+ax1.plot(x, y, color="orange")
+ax2.plot(x, y, color="green")
+ax3.plot(x, y, color="blue")
+ax4.plot(x, y, color="magenta")
+ax5.plot(x, y, color="black")
+ax6.plot(x, y, color="red")
+ds.head()
+pip isntall scipy 
+pip install scipy
+from scipy import constants
+
+print(constants.liter)
+import scipy
+print(scipy.__version__)
+import pandas as pd
+print(pd.__version__)
+from scipy import constants
+print(constants.pi)
+from scipy import constants
+print(constants.e)
+from scipy import constants
+print(dir(constants))
+from scipy import constants
+print(constants.zetta)
+print(constants.alpha)
+print(constants.week)
+print(constants.day)
+print(constants.value)
+ab = ['banana', 'mango', 'cherry']
+ab
+type(ab)
+abc = [125, 'mukul', None, 3.14, 8<10, ab ]
+abc
+line = "*"
+max_length = 10
+
+while len(line) <= max_length:
+    print(line)
+    line += "*"
+    
+while len(line) > 0:
+    print(line)
+    line = line[:-1]
+for i in range(5):
+    for j in range(i+1):
+        print("* ", end="")
+    print()
+    
+n = int(input('Enter number of rows : '))
+ 
+k = 1
+i = 1
+while i <= n :
+    j = 1
+    while j <= i:
+        print("{:3d}".format(k), end = " ")
+        j += 1
+        k += 1
+    print()
+    i += 1
+n = 6
+for i in range(n):
+    print(i+1, "*")
+#Handling Missing data
+
+import pandas as pd
+import numpy as np
+float_data = pd.Series([1.2, -3.5, np.nan, np.nan])
+float_data
+float_data.isna()
+string_data = pd. Series(["aardvark", np.nan, None, "acocado"])
+string_data
+string_data.isna()
+#Filtering out Missing Data
+import pandas as pd
+import numpy as np
+
+data = pd.Series([1, np.nan, 3.5, np.nan, 7])
+data
+data.dropna()
+data[data.notna()]
+data = pd.DataFrame([[1, 6.5, 3], [1, np.nan, np.nan],
+                   [np.nan, np.nan, np.nan], [np.nan, 6.5, 3]])
+data
+data.dropna()
+data.dropna(how="all")
+data.notna()
+data[data.notna()]
+data[3] = 3.5, 3.6, np.nan, np.nan
+data
+df = pd.DataFrame(np.random.standard_normal((7, 3)))
+df
+df.iloc[:4, 1] = np.nan
+df.iloc[:2, 2] = np.nan
+df
+df.dropna()
+df.dropna(thresh=3)
+df
+df.fillna(0)
+ds = pd.read_csv("marks.csv")
+ds
+ds.head()
+ds.info()
+ds.describe()
+info = pd.DataFrame({ "Name":  ["Mukul", "Asad", "Manik", "Taif"],
+                     "Age" : [36, 45, 25, 3],
+                     "Interest": ["Coding", "HR", "IT", "Drawing"],
+                     "District": ["Natore", "Kishorgong", "Barishal", "Natore"]
+    
+})
+info
+type(info)
+info.head()
+
+info.describe()
+List = [36,45,25,3]
+List
+List1 = np.min(List)
+List1
+np.max(List)
+np.mean(List)
+np.var(List)
+np.std(List)
+info
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+import seaborn as sns
+
+plt.bar('Name', 'Age', data = info)
+plt.xlabel("Name")
+plt.ylabel("Age")
+plt.title("Name and Student")
+plt.show()
+plt.scatter('Name', 'Age', data = info)
+plt.xlabel("Name")
+plt.ylabel("Age")
+plt.show()
+plt.plot('Name', 'Age', data = info, color = "hotpink", linestyle = 'dotted', linewidth = 4.5)
+plt.xlabel("Name")
+plt.ylabel("Age")
+plt.title("Name and Age")
+plt.legend()
+plt.show()
+a = 50
+b = 60
+c = a+b
+d = a-b
+e = a*b
+f = a/b
+g = a//b
+c,d,e,f, g
+if a > b:
+    print('a is grater than b:')
+else:
+    print('b is grater than a:')
+a = int(input("Enter the value is a: "))
+b = int(input("Enter the value is b: "))
+c = a + b
+print("The Summation is a and b is ", c)
+def mukul(a,b):
+    return a+b
+def mukul1(a,b):
+    return a-b
+    
+
+
+M_1 = mukul(50,50)
+M_2 = mukul1(50,2)
+print("The Summation is: \nThe Subtraction is: \nThe Multiply is: \nThe Division is: \nThe modulus is:")
+
+M_1
+M_2
+List = [1,2,3,4,5,6,7,8,9]
+
+List
+type(List)
+List.append(10)
+List
+x = List[2] = 50
+x
+List
+x_1 = List.pop()
+x_1
+List
+x_2 = List.pop(2)
+x_2
+List
+x_3 = List.clear()
+x_3
+List
+DN = ({"Name": ["Mukul", "Taif", "Asad"],
+      "Age": [36, 3, 3]
+      
+    
+})
+DN
+type(DN)
+len(DN)
+ds = pd.read_csv("marks.csv")
+ds
+plt.plot('Name', 'Marksmath', data = ds)
+plt.plot('Name', 'Marksenglish', data =ds)
+plt.legend()
+plt.show()
+plt.scatter('Name', 'Marksmath', data = ds)
+plt.scatter('Name', 'Marksenglish', data =ds)
+plt.legend()
+plt.grid()
+plt.title('Student_Marks', color = 'g')
+plt.xlabel('Student_Name', color = 'b')
+plt.ylabel('Student_Marks', color = 'b')
+plt.show()
+#import numpy as np
+#Name = np.array(['Mukul', 'Asad', 'Taif', 'Sumon', 'Sakib', 'Manik', "Arif",'Shamim', 'Asma', 'Nawfa'])
+plt.bar('Name', 'Marksmath', label = 'Marksmath', data = ds, width = .5)
+plt.bar('Name', 'Marksenglish', label = 'Marksenglish', data =ds, width = .2)
+#plt.legend()
+
+plt.title('Student_Marks', color = 'g')
+plt.xlabel('Student_Name', color = 'b')
+plt.ylabel('Student_Marks', color = 'b')
+plt.show()
+import numpy as np
+product = np.array([5,6,3,4,2])
+price = [80,45,64,85,78]
+profit = [10,15,12,14,16]
+
+plt.bar(product- .2, price, label = 'price', width=.4)
+plt.bar(product+.3, profit, label = 'profit', width = .4)
+plt.legend()
+ds = pd.read_csv("marks.csv")
+ds.head()
